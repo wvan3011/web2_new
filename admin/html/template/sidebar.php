@@ -124,26 +124,18 @@
               </a>
               <ul class="menu-sub">
                 <li class="menu-item" id="employee">
-                  <a href="../employee/employee.php" class="menu-link">
+                  <a href="employee.php" class="menu-link">
                     <div data-i18n="Employee">Employee</div><!-- ai lam phan nay thi tu doi lai duong dan -->
                   </a>
                 </li>
                 <li class="menu-item" id="customer">
-                  <a href="../customer/customer.php" class="menu-link">
+                  <a href="customer.php" class="menu-link">
                     <div data-i18n="Customer">Customer</div><!-- ai lam phan nay thi tu doi lai duong dan -->
                   </a>
                 </li>
               </ul>
             </li>
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Management</span>
-            </li>
-            <li class="menu-item" id="suppler">
-              <a href="../sup/supplier.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-package"></i>
-                <div data-i18n="Container">Supplier management</div> 
-              </a>
-            </li>
+            
             </li>
             <!-- Components -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Order management</span></li>
