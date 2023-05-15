@@ -1,0 +1,129 @@
+footer {
+    margin-top: 30px;
+    border-top: 4px solid var(--primary-color);
+    position: relative;
+    left: 0;
+    right: 0;
+    color: #333;
+    padding-top: 30px;
+}
+@media only screen and (max-width: 1000px){
+    .column.column-in-footer *{
+        justify-content:center;
+        text-align:center;
+    }
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.footer-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer__item {
+    margin: 0 4px 8px 4px;
+}
+
+.footer__item i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.footer__item a:hover {
+    color: var(--primary-color);
+}
+
+.footer__item a {
+    line-height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4rem;
+}
+
+.footer__item-qr img:hover {
+    opacity: 0.7;
+}
+
+.footer-pay {
+    padding-left: 0;
+}
+
+.footer-pay i {
+    margin: 0 5px 5px 0;
+    font-size: 4rem;
+}
+
+.footer-pay .fa-cc-visa {
+    color: #125999;
+}
+
+.footer-pay .fa-cc-mastercard {
+    color: #fd7e14;
+}
+
+.footer__follow {
+    height: 20px;
+    display: flex;
+}
+
+.footer__follow a {
+    line-height: 20px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.footer__follow i{
+    font-size:1.8rem;
+    margin-right: 4px;
+}
+
+.footer__follow .fa-facebook {
+    color: #3b5998;
+}
+
+.footer__follow .fa-instagram {
+    color: #d22f81;
+}
+
+.copyright {
+    padding: 6px;
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: #f1f3f5;
+    color:#333;
+    opacity: 0.9;
+}
+
+
+.button-up {
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.button-up:hover {
+    z-index: 1;
+    height: 44px;
+    width: 44px;
+    bottom: 8px;
+    right: 8px;
+    opacity: 0.8;
+    font-size: 22px;
+}

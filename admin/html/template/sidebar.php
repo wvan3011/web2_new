@@ -149,7 +149,7 @@
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Order management</span></li>
             <!-- Cards -->
             <li class="menu-item">
-              <a href="layouts-fluid.html" class="menu-link"><!-- ai lam phan nay thi tu doi lai duong dan -->
+              <a href="orders" class="menu-link"><!-- ai lam phan nay thi tu doi lai duong dan -->
                 <i class='menu-icon tf-icons bx bx-file'></i>
                 
                 <div data-i18n="Order">Order</div><!-- ai lam phan nay thi tu doi lai duong dan -->

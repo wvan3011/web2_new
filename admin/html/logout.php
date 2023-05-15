@@ -1,5 +1,4 @@
-<?php 
-    session_start();
-    unset($_SESSION['useremail']);
-    header("Location: /admin/html/auth-login-basic.php")
-?>
+<?php
+session_start();
+unset($_SESSION['user']);
+header("Location: ./auth-login-basic.php");
