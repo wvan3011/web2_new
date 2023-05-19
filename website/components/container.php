@@ -82,7 +82,7 @@
                         <p class="product__sold">1.1k đánh giá</p>
                     </div>
 
-<!--                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>-->
+                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
                 </div>
                 <p style="display: flex; justify-content: center;padding: 8px;margin: 10px;font-size:14px;border: var(--primary-color) solid 1px;border-radius: 4px;">Giao nhanh miễn phí</p>
                 <div class="product__favourite">
@@ -98,8 +98,8 @@
         </div>
     </div>
     <div class="pages">
-        <div class="page"><i class="fas fa-angle-left"></i></div>
-        <div class="page">1</div>
+        <div class="page "><i class="fas fa-angle-left"></i></div>
+        <div class="page active">1</div>
         <div class="page">2</div>
         <div class="page">3</div>
         <div class="page">...</div>
