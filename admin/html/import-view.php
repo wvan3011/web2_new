@@ -142,14 +142,18 @@
                             <div class="row gx-3 gy-2 align-items-center">
                                 <div class="col-md-3">
                                     <label class="form-label" for="selectTypeOpt">Nhà cung cấp</label>
-                                    <select id="selectTypeOpt" class="form-select color-dropdown">
-                                        <option value="bg-primary" selected="">Primary</option>
-                                        <option value="bg-secondary">Secondary</option>
-                                        <option value="bg-success">Success</option>
-                                        <option value="bg-danger">Danger</option>
-                                        <option value="bg-warning">Warning</option>
-                                        <option value="bg-info">Info</option>
-                                        <option value="bg-dark">Dark</option>
+                                    <select id="supplierSelect" class="form-select color-dropdown">
+                                        <?php
+                                            include '../classes/supplier.php';
+                                            $supplier = new supplier();
+
+                                            $get_supplier = $supplier->get_supplier();
+                                            while ($result = $get_supplier->fetch_assoc()) {
+                                        ?>
+                                                <option value="<?php echo $result['id'] ?>"><?php echo $result['id'].' - '.$result['name'] ?></option>
+                                        <?php
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
@@ -163,31 +167,112 @@
                                 $("#modal-from-add-product").css("display","block");
                             }
                         </script>
+
+                        <script>
+                            function showRecord() {
+                                // var modal = document.getElementsByClassName('modal-body')[0];
+                                var categoryObj = document.getElementById('categorySelect');
+                                var phoneObj = document.getElementById('phoneSelect');
+                                var variantObj = document.getElementById('variantSelect');
+                                var priceObj = document.getElementById('priceInput');
+                                var quantityObj = document.getElementById('quantityInput');
+                                
+                                
+                                var tr = document.createElement('tr');
+
+                                var td = document.createElement('td');
+                                td.setAttribute('value', categoryObj.value);
+                                td.innerHTML = categoryObj.options[categoryObj.selectedIndex].text;
+                                tr.appendChild(td)
+
+                                var td = document.createElement('td');
+                                td.setAttribute('value', phoneObj.value);
+                                td.innerHTML = phoneObj.options[phoneObj.selectedIndex].text;
+                                tr.appendChild(td)
+
+                                var td = document.createElement('td');
+                                td.setAttribute('value', variantObj.value);
+                                td.innerHTML = variantObj.options[variantObj.selectedIndex].text;
+                                tr.appendChild(td)
+
+                                var td = document.createElement('td');
+                                td.setAttribute('value', priceObj.value);
+                                td.innerHTML = parseFloat(priceObj.value).toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
+                                tr.appendChild(td)
+
+                                var td = document.createElement('td');
+                                td.setAttribute('value', quantityObj.value);
+                                td.innerHTML = quantityObj.value;
+                                tr.appendChild(td)
+
+                                var receiptTableObj = document.getElementById('receiptTable').getElementsByTagName('tbody')[0];
+                                receiptTableObj.appendChild(tr);
+
+                                $("#modal-from-add-product").css("display","none");
+                            }
+                        </script>
                         <div class="card-body">
                             <div class="table-responsive text-nowrap">
-                                <table class="table table-bordered">
+                                <table id="receiptTable" class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th>Biến thể sản phẩm</th>
-                                        <th>Price</th>
-                                        <th>Số lượng</th>
+                                        <th value="category">Thương hiệu</th>
+                                        <th value="phone">Điện thoại</th>
+                                        <th value="variant">Loại</th>
+                                        <th value="price">Giá</th>
+                                        <th value="quantity">Số lượng</th>
+                                        
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>Barry Hunter</td>
-                                        <td>Barry Hunter</td>
-                                        <td>Barry Hunter</td>
-                                    </tr><tr>
-                                        <td>Barry Hunter</td>
-                                        <td>Barry Hunter</td>
-                                        <td>Barry Hunter</td>
-                                    </tr>
                                     </tbody>
                                 </table>
-                                <button id="btn-save" type="button" style="margin:30px;" class="btn btn-info">Lưu</button>
+                                <button id="btn-save" type="button" style="margin:30px;" class="btn btn-info" onclick="save()">Lưu</button>
                             </div>
                         </div>
+                        <script>
+                            function save() {
+                                receiptObj = {};
+                                var supplierVal = document.getElementById('supplierSelect').value;
+                                receiptObj.supplier = supplierVal;
+
+                                var table = document.getElementById("receiptTable");
+                                var header = [];
+                                var rows = [];
+                                var total = 0;
+
+                                for (var i = 0; i < table.rows[0].cells.length; i++) {
+                                    header.push(table.rows[0].cells[i].getAttribute('value'));
+                                }
+                            
+                                for (var i = 1; i < table.rows.length; i++) {
+                                    var row = {};
+                                    var subtotal = 0;
+                                    for (var j = 2; j < table.rows[i].cells.length; j++) {
+                                        row[header[j]] = table.rows[i].cells[j].getAttribute('value');
+                                    }
+                                    rows.push(row);
+
+                                    subtotal = row['price'] * row['quantity'];
+                                    total += subtotal;
+                                }
+
+                                receiptObj.total = total;
+                                receiptObj.employee = 'wvan3011@gmail.com';
+                            
+                                receiptObj.details = rows;
+
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '../api/postreceipt.php',
+                                    data: {data: JSON.stringify(receiptObj)},
+                                    success: function(res) {
+                                        alert(res);
+                                        location.reload(); 
+                                    }
+                                });
+                            }
+                        </script>
                     </div>
                     <div class="modal fade show" id="modal-from-add-product" tabindex="-1" style="display: none; padding-left: 0px;" aria-modal="true" role="dialog">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -200,43 +285,122 @@
                                     <div class="row">
                                         <div class="mb-3">
                                             <label for="defaultSelect" class="form-label">Thương hiệu</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option>Default select</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                    </div>                                    <div class="row">
-                                        <div class="mb-3">
-                                            <label for="defaultSelect" class="form-label">Điện thoại</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option>Default select</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                            <select id="categorySelect" class="form-select" onchange="showPhone(this.value)">
+                                                <option value="">Vui lòng chọn thương hiệu</option>
+                                                <?php
+                                                    include '../classes/category.php';
+                                                    $category = new category();
+
+                                                    $get_category = $category->get_category();
+                                                    while ($result = $get_category->fetch_assoc()) {
+                                                ?>
+                                                        <option value="<?php echo $result['id'] ?>"><?php echo $result['id'].' - '.$result['name'] ?></option>
+                                                <?php
+                                                    }
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <script>
+                                        function showPhone(catId) {
+                                            if (catId) {
+                                                $("#phone").css("visibility","visible");
+                                                $("#phone").css("opacity","1");
+
+                                                var select = document.getElementById('phoneSelect');
+                                                $("#phoneSelect").empty();
+                                                var opt = document.createElement('option');
+                                                opt.value = '';
+                                                opt.innerHTML = 'Vui lòng chọn điện thoại';
+                                                select.appendChild(opt);
+
+                                                var xmlhttp = new XMLHttpRequest();
+                                                xmlhttp.onreadystatechange = function() {
+                                                    if (this.readyState == 4 && this.status == 200) {
+                                                        if (this.responseText == '') {
+                                                            return;
+                                                        }
+                                                        const phoneList = JSON.parse(this.responseText);
+                                                        for (const phone of phoneList) {
+                                                            var opt = document.createElement('option');
+                                                            opt.value = phone.id;
+                                                            opt.innerHTML = phone.name;
+                                                            select.appendChild(opt);
+                                                        }
+                                                    }
+                                                };
+                                                xmlhttp.open("GET","../api/getphone.php?by_catid="+catId,true);
+                                                xmlhttp.send();
+                                                
+                                            } else {
+                                                $("#phone").css("visibility","hidden");
+                                                $("#phone").css("opacity","0");
+                                            }
+                                        }
+                                    </script>
+                                    <div class="row" id="phone" style="visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear;">
+                                        <div class="mb-3">
+                                            <label for="defaultSelect" class="form-label">Điện thoại</label>
+                                            <select id="phoneSelect" class="form-select" onchange="showVariant(this.value)">
+                                                <option value="">Vui lòng chọn điện thoại</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        function showVariant(phoneId) {
+                                            if (phoneId) {
+                                                $("#variant").css("visibility","visible");
+                                                $("#variant").css("opacity","1");
+
+                                                var select = document.getElementById('variantSelect');
+                                                $("#variantSelect").empty();
+                                                var opt = document.createElement('option');
+                                                opt.value = '';
+                                                opt.innerHTML = 'Vui lòng chọn biến thể';
+                                                select.appendChild(opt);
+
+                                                var xmlhttp = new XMLHttpRequest();
+                                                xmlhttp.onreadystatechange = function() {
+                                                    if (this.readyState == 4 && this.status == 200) {
+                                                        if (this.responseText == '') {
+                                                            return;
+                                                        }
+                                                        const variantList = JSON.parse(this.responseText);
+                                                        for (const variant of variantList) {
+                                                            var opt = document.createElement('option');
+                                                            opt.value = variant.id;
+                                                            opt.innerHTML = variant.size + ' - Màu ' + variant.color;
+                                                            select.appendChild(opt);
+                                                        }
+                                                    }
+                                                };
+                                                xmlhttp.open("GET","../api/getvariant.php?by_phoneid="+phoneId,true);
+                                                xmlhttp.send();
+                                                
+                                            } else {
+                                                $("#variant").css("visibility","hidden");
+                                                $("#variant").css("opacity","0");
+                                            }
+                                        }
+                                    </script>
+
+                                    <div class="row" id="variant" style="visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear;">
                                         <div class="mb-3">
                                             <label for="defaultSelect" class="form-label">Biến thể</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option>Default select</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                            <select id="variantSelect" class="form-select">
+                                                <option>Vui lòng chọn biến thể</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="row g-2">
                                         <div class="col mb-0">
-                                            <label for="emailWithTitle" class="form-label">Giá bán</label>
-                                            <input type="text" id="emailWithTitle" class="form-control" placeholder="Nhập giá bán">
+                                            <label for="emailWithTitle" class="form-label">Giá nhập</label>
+                                            <input type="number" id="priceInput" class="form-control" placeholder="Nhập giá nhập">
                                         </div>
                                         <div class="col mb-0">
                                             <label for="dobWithTitle" class="form-label">Số lượng</label>
-                                            <input type="text" id="dobWithTitle" class="form-control" placeholder="Nhập số lượng">
+                                            <input type="number" id="quantityInput" class="form-control" placeholder="Nhập số lượng">
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +408,7 @@
                                     <button id="btn-close-modal-from-add-product" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                         Đóng
                                     </button>
-                                    <button type="button" class="btn btn-primary">Thêm vào đơn nhập</button>
+                                    <button disabled type="button" class="btn btn-primary" id="add" onclick="showRecord()">Thêm vào đơn nhập</button>
                                 </div>
                             </div>
                         </div>
@@ -256,6 +420,28 @@
                         document.getElementById("btn-x-modal-from-add-product").onclick=function () {
                             $("#modal-from-add-product").css("display","none");
                         }
+
+                        var categoryObj = document.getElementById('categorySelect');
+                        var phoneObj = document.getElementById('phoneSelect');
+                        var variantObj = document.getElementById('variantSelect');
+                        var priceObj = document.getElementById('priceInput');
+                        var quantityObj = document.getElementById('quantityInput');
+
+                        addbtn = document.getElementById("add");
+
+                        function changeButton() {
+                            if (categoryObj.value && phoneObj.value && variantObj.value && priceObj.value && quantityObj.value) {
+                                addbtn.disabled = false;
+                            } else {
+                                addbtn.disabled = true;
+                            } 
+                        }
+                        
+                        categoryObj.oninput=function () {changeButton()};
+                        phoneObj.oninput=function () {changeButton()};
+                        variantObj.oninput=function () {changeButton()};
+                        priceObj.oninput=function () {changeButton()};
+                        quantityObj.oninput=function () {changeButton()};
                     </script>
                     <!-- Footer -->
                     <footer class="content-footer footer bg-footer-theme">
