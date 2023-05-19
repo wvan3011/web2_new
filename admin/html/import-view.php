@@ -294,7 +294,7 @@
                                                     $get_category = $category->get_category();
                                                     while ($result = $get_category->fetch_assoc()) {
                                                 ?>
-                                                        <option value="<?php echo $result['id'] ?>"><?php echo $result['id'].' - '.$result['name'] ?></option>
+                                                        <option value="<?php echo $result['id'] ?>"><?php echo $result['name'] ?></option>
                                                 <?php
                                                     }
                                                 ?>
