@@ -65,7 +65,7 @@
     <div class="products wrapper up-to-5-columns">
         <h3 style="width: inherit; text-align: left;padding:0 20px;font: inherit;font-size: 20px;color:var(--primary-color);">Nổi bật nhất</h3>
         <div class="column">
-            <a class="product" href="">
+            <a class="product" href="./phone-details">
                 <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
                 <h4 class="product-name">Samsung Galaxy M14 5G 4GB 128GB</h4>
                 <div class="product__price">
