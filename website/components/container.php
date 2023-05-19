@@ -6,13 +6,11 @@
                 <div data-u="loading" class="jssorl-009-spin"><img src="./assets/img/slider/spin.svg"
                                                                    alt=""/></div>
                 <div data-u="slides" class="list-slider">
-                    <div><img data-u="image" src="./assets/img/slider/quang_cao.png"/></div>
-                    <div><img data-u="image" src="./assets/img/slider/Sale-giải-phóng-slider.jpg"/>
-                    </div>
-                    <div><img data-u="image" src="./assets/img/slider/Asus-AMD-4000.jpg"/></div>
-                    <div><img data-u="image" src="./assets/img/slider/bão-mờ-si-slider-1.jpg"/></div>
-                    <div><img data-u="image"
-                              src="./assets/img/slider/Studio_laptop_Xgear_885_522.jpg"/></div>
+                    <div><img data-u="image" src="https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/x5-pro-sliding.png"/></div>
+                    <div><img data-u="image" src="https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/redmi-note12s-004-sliding.png"/></div>
+                    <div><img data-u="image" src="https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/vivo-v27e-sliding-moban.png"/></div>
+                    <div><img data-u="image" src="https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/fold-right-th5-new.png"/></div>
+                    <div><img data-u="image" src="https://cdn2.cellphones.com.vn/690x300,webp,q100/https://dashboard.cellphones.com.vn/storage/vivo-v27e-sliding-moban.png"/></div>
                 </div>
                 <a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">responsive
                     slider</a>
@@ -54,8 +52,8 @@
             </script>
         </div>
         <div class="advertisement-fixed">
-            <img data-u="image" src="./assets/img/slider/Chiến-game-cực-đã-cũng-màn-hình-Asus.jpg"/>
-            <img data-u="image" src="./assets/img/slider/XGear_G512_FX506_885x522.jpg"/>
+            <img data-u="image" src="https://cdn2.cellphones.com.vn/690x300,webp,q10/https://dashboard.cellphones.com.vn/storage/fold-right-th5-new.png"/>
+            <img data-u="image" src="https://cdn2.cellphones.com.vn/690x300,webp,q10/https://dashboard.cellphones.com.vn/storage/right-banner-th5-newww1.jpg"/>
         </div>
     </div>
     <div class="wrapper up-to-5-columns list-logo-brands ">
@@ -67,10 +65,9 @@
     <div class="products wrapper up-to-5-columns">
         <h3 style="width: inherit; text-align: left;padding:0 20px;font: inherit;font-size: 20px;color:var(--primary-color);">Nổi bật nhất</h3>
         <div class="column">
-            <a class="product">
+            <a class="product" href="">
                 <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
+                <h4 class="product-name">Samsung Galaxy M14 5G 4GB 128GB</h4>
                 <div class="product__price">
                     <span class="product__price-old">17.690.000đ</span>
                     <span class="product__price-new">15.690.000đ</span>
@@ -85,264 +82,9 @@
                         <p class="product__sold">1.1k đánh giá</p>
                     </div>
 
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
+<!--                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>-->
                 </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
-                <div class="product__favourite">
-                    <i class="fas fa-check"></i>
-                    &nbsp;Yêu thích
-                </div>
-                <div class="product__sale-off">
-                    <div class="after"></div>
-                    <span class="sale-off__percent">10%</span>
-                    <span class="sale-off__label">Giảm</span>
-                </div>
-            </a>
-        </div>
-        <div class="column">
-            <a class="product">
-                <div class="product__img" style="background-image: url('../phone_image/Rog5s_1_1.jpg')"></div>
-                <h4 class="product-name">Áo thun WEARIT chất liệu cotton 100% kiểu dáng tay lỡ form rộng lonely but
-                    rich</h4>
-                <div class="product__price">
-                    <span class="product__price-old">17.690.000đ</span>
-                    <span class="product__price-new">15.690.000đ</span>
-                </div>
-                <div class="product__action">
-                    <div class="product__start">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <p class="product__sold">1.1k đánh giá</p>
-                    </div>
-
-                    <i class="fas fa-cart-plus product__action-add-cart" title="Thêm vào giỏ hàng"></i>
-                </div>
+                <p style="display: flex; justify-content: center;padding: 8px;margin: 10px;font-size:14px;border: var(--primary-color) solid 1px;border-radius: 4px;">Giao nhanh miễn phí</p>
                 <div class="product__favourite">
                     <i class="fas fa-check"></i>
                     &nbsp;Yêu thích

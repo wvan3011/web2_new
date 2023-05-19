@@ -1,7 +1,6 @@
 <div class="header">
   <div class="wrapper wrapper-header">
     <div class="header-top">
-
       <div class="header-top-left">
         <i class="fab fa-facebook header-top-left__item"></i>
         <i class="fab fa-instagram header-top-left__item"></i>
@@ -46,7 +45,7 @@
       <div class="header-center-top">
         <form action="" class="search-bar">
           <label class="search__input">
-            <input type="text" name="inputSearch" placeholder="Tìm kiếm laptop, hãng,...">
+            <input type="text" name="inputSearch" placeholder="Tìm kiếm điện thoại, hãng,...">
           </label>
           <button class="search__button"><i class="fas fa-search"></i></button>
         </form>
@@ -98,11 +97,11 @@
         <div class="custom-select" style="width:200px;">
           <select>
             <option value="0">Chọn thương hiệu:</option>
-            <option value="1">hp</option>
-            <option value="2">Dell</option>
-            <option value="3">Lenovo</option>
-            <option value="4">Asus</option>
-            <option value="5">Aser</option>
+            <option value="1">Samsung</option>
+            <option value="2">Apple</option>
+            <option value="3">Xiaomi</option>
+            <option value="4">Nokia</option>
+            <option value="5">Oppo</option>
           </select>
         </div>
       </div>
